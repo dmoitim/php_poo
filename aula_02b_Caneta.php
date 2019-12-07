@@ -2,13 +2,13 @@
 
 class Caneta
 {
-    var $modelo;
-    var $cor;
-    var $ponta;
-    var $carga;
-    var $tampada;
+    public $modelo;
+    public $cor;
+    private $ponta;
+    protected $carga;
+    protected $tampada;
 
-    function rabiscar()
+    public function rabiscar()
     {
         if ($this->tampada) {
             echo "<p>Erro! Não posso rabiscar.</p>";
@@ -17,13 +17,13 @@ class Caneta
         }
     }
 
-    function tampar()
+    public function tampar()
     {
         echo "<p>Caneta tampada.</p>";
         $this->tampada = true;
     }
 
-    function destampar()
+    public function destampar()
     {
         echo "<p>Caneta destampada.</p>";
         $this->tampada = false;
